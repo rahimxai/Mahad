@@ -317,8 +317,10 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 // WORK CATEGORY TABS + PER-PANEL 2-VIDEO CAROUSEL
 // ================================================================
 (function initWorkTabs() {
-  const tabs   = $$('.work-tab');
-  const panels = $$('.work-panel');
+  const workSection = document.getElementById('work');
+  if (!workSection) return;
+  const tabs   = $$('.work-tab',   workSection);
+  const panels = $$('.work-panel', workSection);
   if (!tabs.length) return;
 
   // ── Per-panel carousel state ──────────────────────────────────
@@ -354,6 +356,54 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
       panels.forEach(p => p.classList.remove('active'));
       tab.classList.add('active');
       const panel = document.getElementById('tab-' + target);
+      if (panel) panel.classList.add('active');
+    });
+  });
+})();
+
+// ================================================================
+// BRANDING TABS (Pictures / Videos) — same pattern as work tabs
+// ================================================================
+(function initBrandingTabs() {
+  const brandSection = document.getElementById('branding');
+  if (!brandSection) return;
+  const tabs   = $$('.work-tab',   brandSection);
+  const panels = $$('.work-panel', brandSection);
+  if (!tabs.length) return;
+
+  // Per-panel carousel (reuses .wc-page / .wc-nav)
+  panels.forEach(panel => {
+    const pages     = $$('.wc-page', panel);
+    const prevBtn   = panel.querySelector('.wc-prev');
+    const nextBtn   = panel.querySelector('.wc-next');
+    const indicator = panel.querySelector('.wc-indicator');
+    if (!pages.length) return;
+
+    let current = 0;
+
+    function goTo(idx) {
+      pages[current].classList.remove('active');
+      current = idx;
+      pages[current].classList.add('active');
+      if (indicator) indicator.textContent = `${current + 1} / ${pages.length}`;
+      if (prevBtn)   prevBtn.disabled  = current === 0;
+      if (nextBtn)   nextBtn.disabled  = current === pages.length - 1;
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => { if (current > 0) goTo(current - 1); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { if (current < pages.length - 1) goTo(current + 1); });
+
+    goTo(0);
+  });
+
+  // Tab switching
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.btab;
+      tabs.forEach(t   => t.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      const panel = brandSection.querySelector('#btab-' + target);
       if (panel) panel.classList.add('active');
     });
   });

@@ -26,7 +26,25 @@ def contact():
     if not all([name, email, message]):
         return jsonify({'status': 'error', 'message': 'All fields required'}), 400
 
-    # TODO: Hook up email sending (e.g. Flask-Mail, SendGrid, etc.)
+    import smtplib
+    from email.mime.text import MIMEText
+
+    subject = data.get('subject', 'Portfolio Contact Form')
+    body = f"Name: {name}\nEmail: {email}\nSubject: {subject}\n\n{message}"
+    msg = MIMEText(body)
+    msg['Subject'] = f'Portfolio Contact: {subject}'
+    msg['From'] = 'mahadhamza10@gmail.com'
+    msg['To'] = 'mahadhamza10@gmail.com'
+    msg['Reply-To'] = email
+
+    try:
+        with smtplib.SMTP('smtp.gmail.com', 587) as server:
+            server.starttls()
+            server.login('mahadhamza10@gmail.com', os.environ.get('GMAIL_APP_PASSWORD', ''))
+            server.send_message(msg)
+    except Exception as e:
+        print(f'[CONTACT] Email send failed: {e}')
+
     print(f"[CONTACT] From: {name} <{email}> — {message[:80]}")
     return jsonify({'status': 'ok', 'message': 'Message received!'})
 

@@ -5,12 +5,13 @@ Run: python app.py
 
 from flask import Flask, render_template, jsonify, request
 import os
+import smtplib
+from email.mime.text import MIMEText
 from dotenv import load_dotenv
 
 load_dotenv()
 
 app = Flask(__name__)
-app.secret_key = os.urandom(24)
 
 
 @app.route('/')
@@ -28,9 +29,6 @@ def contact():
 
     if not all([name, email, message]):
         return jsonify({'status': 'error', 'message': 'All fields required'}), 400
-
-    import smtplib
-    from email.mime.text import MIMEText
 
     subject = data.get('subject', 'Portfolio Contact Form')
     body = f"Name: {name}\nEmail: {email}\nSubject: {subject}\n\n{message}"

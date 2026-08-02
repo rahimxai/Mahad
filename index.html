@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahad Hamza — Video Editor & Creative Manager</title>
+  <meta name="description" content="Portfolio of Mahad Hamza — Video Editor & Creative Manager. Professional work, passion projects, and creative direction." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital@1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       CUSTOM CURSOR
+  ============================================================ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="nav" id="navbar">
+    <a href="#home" class="nav-brand">MAHAD.</a>
+    <ul class="nav-links">
+      <li><a href="#work">WORK</a></li>
+      <li><a href="#projects">PROJECTS</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+    <button class="nav-menu-btn" id="menuBtn" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" id="menuClose" aria-label="Close menu">
+      <span></span><span></span>
+    </button>
+    <ul>
+      <li><a href="#work" class="menu-link">WORK</a></li>
+      <li><a href="#projects" class="menu-link">PROJECTS</a></li>
+      <li><a href="#about" class="menu-link">ABOUT</a></li>
+      <li><a href="#contact" class="menu-link">CONTACT</a></li>
+    </ul>
+  </div>
+
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <section class="hero" id="home">
+    <!-- Full-bleed background photo -->
+    <div class="hero-bg-photo">
+      <img
+        src="images/WhatsApp Image 2026-08-02 at 6.05.02 PM.jpeg"
+        alt="Mahad Hamza"
+        id="heroBgImg"
+      />
+    </div>
+
+    <!-- Multi-layer gradient overlay for cinematic mood -->
+    <div class="hero-overlay"></div>
+
+    <!-- Dark shade on the right so the text is clearly visible -->
+    <div class="hero-text-shade"></div>
+
+    <!-- Film grain noise texture -->
+    <div class="hero-noise"></div>
+
+    <!-- MAHAD HAMZA — large text OVERLAYS the photo
+         Positioned at center, merges artistically with the image -->
+    <div class="hero-bg-text" aria-hidden="true">MAHAD<br>HAMZA</div>
+
+    <!-- Red glow vignette at bottom -->
+    <div class="hero-vignette"></div>
+
+    <!-- Bottom-left: Title + CTA -->
+    <div class="hero-content" id="heroContent">
+      
+      <div class="hero-role">Video Editor &amp; Creative Manager</div>
+      <div class="hero-cta">
+        <a href="#work" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-outline">Get In Touch</a>
+      </div>
+    </div>
+
+    <!-- Bottom gradient fade -->
+    <div class="hero-fade"></div>
+  </section>
+
+  <!-- ============================================================
+       MARQUEE STRIP
+  ============================================================ -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <span>VIDEO EDITING</span>
+      <span class="dot">◆</span>
+      <span>COLOR GRADING</span>
+      <span class="dot">◆</span>
+      <span>CREATIVE DIRECTION</span>
+      <span class="dot">◆</span>
+      <span>MOTION GRAPHICS</span>
+      <span class="dot">◆</span>
+      <span>POST PRODUCTION</span>
+      <span class="dot">◆</span>
+      <span>VIDEO EDITING</span>
+      <span class="dot">◆</span>
+      <span>COLOR GRADING</span>
+      <span class="dot">◆</span>
+      <span>CREATIVE DIRECTION</span>
+      <span class="dot">◆</span>
+      <span>MOTION GRAPHICS</span>
+      <span class="dot">◆</span>
+      <span>POST PRODUCTION</span>
+      <span class="dot">◆</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PASSION PROJECTS SECTION
+  ============================================================ -->
+  <section class="section passion-section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        
+        <div class="section-label">Personal Work</div>
+        <h2 class="section-title">PASSION <em>PROJECTS</em></h2>
+        <p class="section-sub">Experimental edits, cinematic explorations, and personal creative ventures — the work that fuels the fire.</p>
+      </div>
+
+      <div class="video-grid passion-grid" id="passionGrid">
+        <div class="video-card featured reveal">
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_5"
+              title="Passion Project 1"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="video-meta">
+            <div class="video-number">01</div>
+            <div class="video-info">
+              <h3>Passion Project 01</h3>
+              <p>Personal · Experimental</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card reveal">
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_6"
+              title="Passion Project 2"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="video-meta">
+            <div class="video-number">02</div>
+            <div class="video-info">
+              <h3>Passion Project 02</h3>
+              <p>Personal · Cinematic</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card reveal">
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_7"
+              title="Passion Project 3"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="video-meta">
+            <div class="video-number">03</div>
+            <div class="video-info">
+              <h3>Passion Project 03</h3>
+              <p>Personal · Creative</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROFESSIONAL WORK SECTION
+  ============================================================ -->
+  <section class="section work-section" id="work">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">PROFESSIONAL WORK</div>
+        <h2 class="section-title">Selected <em>Projects</em></h2>
+        <p class="section-sub">A curated collection of client work spanning commercial campaigns, brand storytelling, and editorial cuts.</p>
+      </div>
+
+      <div class="video-grid" id="workGrid">
+        <!--
+          HOW TO ADD YOUR VIDEOS:
+          1. Get your YouTube video URL, e.g.: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+          2. Extract the video ID (the part after "v="):  dQw4w9WgXcQ
+          3. Replace VIDEO_ID_X below with your actual video ID.
+          Example: src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        -->
+        <div class="video-card reveal">
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_1"
+              title="Project 1"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="video-meta">
+            <div class="video-number">01</div>
+            <div class="video-info">
+              <h3>Project Title 01</h3>
+              <p>Commercial · Brand Campaign</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card reveal">
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_2"
+              title="Project 2"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="video-meta">
+            <div class="video-number">02</div>
+            <div class="video-info">
+              <h3>Project Title 02</h3>
+              <p>Short Film · Narrative</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card reveal">
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_3"
+              title="Project 3"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="video-meta">
+            <div class="video-number">03</div>
+            <div class="video-info">
+              <h3>Project Title 03</h3>
+              <p>Music Video · Editing</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card reveal">
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_4"
+              title="Project 4"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="video-meta">
+            <div class="video-number">04</div>
+            <div class="video-info">
+              <h3>Project Title 04</h3>
+              <p>Documentary · Direction</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT SECTION
+  ============================================================ -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left reveal">
+          <div class="section-label">ABOUT ME</div>
+          <h2 class="about-heading">
+            Crafting <em>Visual Stories</em><br>That Move People
+          </h2>
+          <p class="about-text">
+            I'm Mahad Hamza — a Video Editor and Creative Manager with a passion for transforming raw footage into compelling, emotion-driven narratives. Whether it's a high-energy commercial, a cinematic brand story, or a personal creative project, I bring a meticulous eye for detail and a bold creative vision to every cut.
+          </p>
+          <p class="about-text">
+            Based in [Your City], working globally. Let's build something unforgettable.
+          </p>
+          <div class="about-stats">
+            <div class="stat reveal">
+              <span class="stat-num">5+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat reveal">
+              <span class="stat-num">50+</span>
+              <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat reveal">
+              <span class="stat-num">20+</span>
+              <span class="stat-label">Clients Served</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-right reveal">
+          <div class="skills-block">
+            <div class="skills-title">CORE SKILLS</div>
+            <div class="skill-item">
+              <div class="skill-head">
+                <span>Video Editing</span>
+                <span>95%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="95"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-head">
+                <span>Color Grading</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-head">
+                <span>Motion Graphics</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-head">
+                <span>Creative Direction</span>
+                <span>88%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="88"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-head">
+                <span>Post Production</span>
+                <span>92%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="92"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tools-block">
+            <div class="skills-title">TOOLS</div>
+            <div class="tools-grid">
+              <div class="tool-tag">Premiere Pro</div>
+              <div class="tool-tag">After Effects</div>
+              <div class="tool-tag">DaVinci Resolve</div>
+              <div class="tool-tag">Final Cut Pro</div>
+              <div class="tool-tag">Photoshop</div>
+              <div class="tool-tag">Illustrator</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT SECTION
+  ============================================================ -->
+  <section class="section contact-section" id="contact">
+    <!-- Decorative large background text -->
+    <div class="contact-bg-text" aria-hidden="true">CONTACT</div>
+
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Left: Info -->
+        <div class="contact-info reveal">
+          <div class="section-label">GET IN TOUCH</div>
+          <h2 class="contact-heading">
+            Let's Create<br><em>Something</em><br>Together
+          </h2>
+
+          <div class="contact-details">
+            <!--
+              Replace the placeholder email, phone, and location with your real details.
+            -->
+            <a href="mailto:mahad@email.com" class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="2" y="4" width="20" height="16" rx="2"/>
+                  <path d="M2 7l10 7 10-7"/>
+                </svg>
+              </div>
+              <span>mahad@email.com</span>
+            </a>
+            <a href="tel:+923001234567" class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.1 1.18 2 2 0 012.11 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.56-.56a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+              </div>
+              <span>+92 300 123 4567</span>
+            </a>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <span>Your City, Country</span>
+            </div>
+          </div>
+
+          <!-- Social links -->
+          <div class="social-links">
+            <!--
+              Replace # with your actual profile URLs:
+              Instagram, YouTube, LinkedIn, Behance, etc.
+            -->
+            <a href="#" target="_blank" rel="noopener" class="social-link">
+              <span class="social-name">Instagram</span>
+              <span class="social-arrow">↗</span>
+            </a>
+            <a href="#" target="_blank" rel="noopener" class="social-link">
+              <span class="social-name">YouTube</span>
+              <span class="social-arrow">↗</span>
+            </a>
+            <a href="#" target="_blank" rel="noopener" class="social-link">
+              <span class="social-name">LinkedIn</span>
+              <span class="social-arrow">↗</span>
+            </a>
+            <a href="#" target="_blank" rel="noopener" class="social-link">
+              <span class="social-name">Behance</span>
+              <span class="social-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="contact-form-wrap reveal">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project Inquiry" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-submit" id="submitBtn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">MAHAD HAMZA</div>
+        <div class="footer-links">
+          <a href="#work">Work</a>
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p class="footer-tagline">Video Editor &amp; Creative Manager</p>
+        <div class="footer-socials">
+          <a href="#" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="#" target="_blank" rel="noopener" aria-label="YouTube">YT</a>
+          <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">LI</a>
+          <a href="#" target="_blank" rel="noopener" aria-label="Behance">BE</a>
+        </div>
+        <p class="footer-copy">© 2025 Mahad Hamza. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahad Hamza — Video Editor & Creative Manager</title>
+  <meta name="description" content="Portfolio of Mahad Hamza — Video Editor & Creative Manager. Professional work, passion projects, and creative direction." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital@1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body>
+
+  <!-- ============================================================
+       CUSTOM CURSOR
+  ============================================================ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="nav" id="navbar">
+    <a href="#home" class="nav-brand">MAHAD.</a>
+    <ul class="nav-links">
+      <li><a href="#work">WORK</a></li>
+      <li><a href="#projects">PROJECTS</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+    <button class="nav-menu-btn" id="menuBtn" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#work" class="menu-link">WORK</a></li>
+      <li><a href="#projects" class="menu-link">PROJECTS</a></li>
+      <li><a href="#about" class="menu-link">ABOUT</a></li>
+      <li><a href="#contact" class="menu-link">CONTACT</a></li>
+    </ul>
+  </div>
+
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <section class="hero" id="home">
+    <div class="hero-bg-photo">
+      <img
+        src="{{ url_for('static', filename='images/WhatsApp Image 2026-08-02 at 6.05.02 PM.jpeg') }}"
+        alt="Mahad Hamza"
+        id="heroBgImg"
+      />
+    </div>
+
+    <div class="hero-overlay"></div>
+    <div class="hero-text-shade"></div>
+    <div class="hero-noise"></div>
+
+    <div class="hero-bg-text" aria-hidden="true">MAHAD<br>HAMZA</div>
+
+    <div class="hero-vignette"></div>
+
+    <div class="hero-content" id="heroContent">
+      <div class="hero-name">MAHAD<br>HAMZA</div>
+      <div class="hero-role">Video Editor & Creative Manager</div>
+      <div class="hero-cta">
+        <a href="#work" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-outline">Get In Touch</a>
+      </div>
+    </div>
+
+    <div class="hero-fade"></div>
+  </section>
+
+  <!-- ============================================================
+       MARQUEE STRIP
+  ============================================================ -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <span>VIDEO EDITING</span><span class="dot">◆</span>
+      <span>COLOR GRADING</span><span class="dot">◆</span>
+      <span>CREATIVE DIRECTION</span><span class="dot">◆</span>
+      <span>MOTION GRAPHICS</span><span class="dot">◆</span>
+      <span>POST PRODUCTION</span><span class="dot">◆</span>
+      <span>VIDEO EDITING</span><span class="dot">◆</span>
+      <span>COLOR GRADING</span><span class="dot">◆</span>
+      <span>CREATIVE DIRECTION</span><span class="dot">◆</span>
+      <span>MOTION GRAPHICS</span><span class="dot">◆</span>
+      <span>POST PRODUCTION</span><span class="dot">◆</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PASSION PROJECTS SECTION — 9 Videos, 3 visible, carousel
+  ============================================================ -->
+  <section class="section passion-section" id="projects">
+    <div class="container">
+      <div class="section-header-row reveal">
+        <div class="section-header-text">
+          <div class="section-label">Personal Work</div>
+          <h2 class="section-title">PASSION <em>PROJECTS</em></h2>
+          <p class="section-sub">Experimental edits, cinematic explorations, and personal creative ventures.</p>
+        </div>
+        <!-- Carousel nav arrows -->
+        <div class="carousel-nav">
+          <button class="carousel-btn prev" id="passionPrev" aria-label="Previous">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <span class="carousel-indicator" id="passionIndicator">1 / 3</span>
+          <button class="carousel-btn next" id="passionNext" aria-label="Next">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Carousel viewport -->
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="passionTrack">
+          <!--
+            ╔══════════════════════════════════════════════════════════╗
+            ║  HOW TO ADD YOUR 9 PASSION PROJECT VIDEOS:              ║
+            ║  1. Get YouTube URL: https://youtube.com/watch?v=XXXXX  ║
+            ║  2. Copy the video ID (after v=)                        ║
+            ║  3. Replace PASSION_VIDEO_1 through PASSION_VIDEO_8     ║
+            ║     with your actual IDs below.                         ║
+            ║  Videos play directly on site (embedded).               ║
+            ╚══════════════════════════════════════════════════════════╝
+          -->
+
+          <!-- Page 1 (videos 1-3) -->
+          <div class="carousel-page active" data-page="1">
+            <div class="video-card">
+              <div class="video-wrap">
+                <iframe src="https://www.youtube.com/embed/-wgAxYXWmAg" title="Passion Project 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-meta">
+                <div class="video-number">01</div>
+                <div class="video-info"><h3>Passion Project 01</h3><p>Personal · Experimental</p></div>
+              </div>
+            </div>
+            <div class="video-card">
+              <div class="video-wrap">
+                <iframe src="https://www.youtube.com/embed/r6O_HgQGGmE" title="Passion Project 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-meta">
+                <div class="video-number">02</div>
+                <div class="video-info"><h3>Passion Project 02</h3><p>Personal · Cinematic</p></div>
+              </div>
+            </div>
+            <div class="video-card">
+              <div class="video-wrap">
+                <iframe src="https://www.youtube.com/embed/fFbuCjrx3go" title="Passion Project 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-meta">
+                <div class="video-number">03</div>
+                <div class="video-info"><h3>Passion Project 03</h3><p>Personal · Creative</p></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Page 2 (videos 4-6) -->
+          <div class="carousel-page" data-page="2">
+            <div class="video-card">
+              <div class="video-wrap">
+                <iframe src="https://www.youtube.com/embed/5UMGybpIKRQ" title="Passion Project 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-meta">
+                <div class="video-number">04</div>
+                <div class="video-info"><h3>Passion Project 04</h3><p>Personal · Experimental</p></div>
+              </div>
+            </div>
+            <div class="video-card">
+              <div class="video-wrap">
+                <iframe src="https://www.youtube.com/embed/2tdl-eV-0ps" title="Passion Project 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-meta">
+                <div class="video-number">05</div>
+                <div class="video-info"><h3>Passion Project 05</h3><p>Personal · Cinematic</p></div>
+              </div>
+            </div>
+            <div class="video-card">
+              <div class="video-wrap">
+                <iframe src="https://www.youtube.com/embed/vE_danPLKo4" title="Passion Project 6" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-meta">
+                <div class="video-number">06</div>
+                <div class="video-info"><h3>Passion Project 06</h3><p>Personal · Creative</p></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Page 3 (videos 7-8) -->
+          <div class="carousel-page" data-page="3">
+            <div class="video-card">
+              <div class="video-wrap">
+                <iframe src="https://www.youtube.com/embed/TY_2MB8sIP8" title="Passion Project 7" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-meta">
+                <div class="video-number">07</div>
+                <div class="video-info"><h3>Passion Project 07</h3><p>Personal · Experimental</p></div>
+              </div>
+            </div>
+            <div class="video-card">
+              <div class="video-wrap">
+                <iframe src="https://www.youtube.com/embed/LTg0VcqVL5g" title="Passion Project 8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-meta">
+                <div class="video-number">08</div>
+                <div class="video-info"><h3>Passion Project 08</h3><p>Personal · Cinematic</p></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROFESSIONAL WORK SECTION — 6 Category Tabs + 2-Video Carousel
+  ============================================================ -->
+  <section class="section work-section" id="work">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">PROFESSIONAL WORK</div>
+        <h2 class="section-title">Selected <em>Projects</em></h2>
+        <p class="section-sub">A curated collection of client work across six disciplines.</p>
+      </div>
+
+      <!-- ── Category Tabs ──────────────────────────────────────── -->
+      <div class="work-tabs" id="workTabs">
+        <button class="work-tab active" data-tab="short">Short Form</button>
+        <button class="work-tab" data-tab="long">Long Form</button>
+        <button class="work-tab" data-tab="motion">Motion Graphics &amp; Animations</button>
+        <button class="work-tab" data-tab="ads">Ads</button>
+        <button class="work-tab" data-tab="docs">Documentaries</button>
+        <button class="work-tab" data-tab="podcasts">Podcasts</button>
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════════
+           SHORT FORM  —  replace SF_V1 … SF_V4 with real YouTube IDs
+      ══════════════════════════════════════════════════════════════ -->
+      <div class="work-panel active" id="tab-short">
+        <div class="wc-page active">
+          <div class="video-grid">
+            <div class="video-card reveal">
+              <div class="video-wrap"><iframe src="https://www.youtube.com/embed/SF_V1" title="Short Form 01" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+              <div class="video-meta"><div class="video-number">01</div><div class="video-info"><h3>Short Form 01</h3><p>Short Form · Content</p></div></div>
+            </div>
+            <div class="video-card reveal">
+              <div class="video-wrap"><iframe src="https://www.youtube.com/embed/SF_V2" title="Short Form 02" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+              <div class="video-meta"><div class="video-number">02</div><div class="video-info"><h3>Short Form 02</h3><p>Short Form · Content</p></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="wc-page">
+          <div class="video-grid">
+            <div class="video-card reveal">
+              <div class="video-wrap"><iframe src="https://www.youtube.com/embed/SF_V3" title="Short Form 03" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+              <div class="video-meta"><div class="video-number">03</div><div class="video-info"><h3>Short Form 03</h3><p>Short Form · Content</p></div></div>
+            </div>
+            <div class="video-card reveal">
+              <div class="video-wrap"><iframe src="https://www.youtube.com/embed/SF_V4" title="Short Form 04" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+              <div class="video-meta"><div class="video-number">04</div><div class="video-info"><h3>Short Form 04</h3><p>Short Form · Content</p></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="wc-nav">
+          <button class="carousel-btn wc-prev" aria-label="Previous"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <span class="carousel-indicator wc-indicator">1 / 2</span>
+          <button class="carousel-btn wc-next" aria-label="Next"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════════
+           LONG FORM  —  replace LF_V1 … LF_V4
+      ══════════════════════════════════════════════════════════════ -->
+      <div class="work-panel" id="tab-long">
+        <div class="wc-page active">
+          <div class="video-grid">
+            <div class="video-card reveal">
+              <div class="video-wrap"><iframe src="https://www.youtube.com/embed/LF_V1" title="Long Form 01" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+              <div class="video-meta"><div class="video-number">01</div><div class="video-info"><h3>Long Form 01</h3><p>Long Form · Storytelling</p></div></div>
+            </div>
+            <div class="video-card reveal">
+              <div class="video-wrap"><iframe src="https://www.youtube.com/embed/LF_V2" title="Long Form 02" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+              <div class="video-meta"><div class="video-number">02</div><div class="video-info"><h3>Long Form 02</h3><p>Long Form · Storytelling</p></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="wc-page">
+          <div class="video-grid">
+            <div class="video-card reveal">
+              <div class="video-wrap"><iframe src="https://www.youtube.com/embed/LF_V3" title="Long Form 03" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+              <div class="video-meta"><div class="video-number">03</div><div class="video-info"><h3>Long Form 03</h3><p>Long Form · Storytelling</p></div></div>
+            </div>
+            <div class="video-card reveal">
+              <div class="video-wrap"><iframe src="https://www.youtube.com/embed/LF_V4" title="Long Form 04" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+              <div class="video-meta"><div class="video-number">04</div><div class="video-info"><h3>Long Form 04</h3><p>Long Form · Storytelling</p></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="wc-nav">
+          <button class="carousel-btn wc-prev" aria-label="Previous"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <span class="carousel-indicator wc-indicator">1 / 2</span>
+          <button class="carousel-btn wc-next" aria-label="Next"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════════
+           MOTION GRAPHICS & ANIMATIONS  —  replace MG_V1 … MG_V4
+      ══════════════════════════════════════════════════════════════ -->
+      <div class="work-panel" id="tab-motion">
+        <div class="wc-page active">
+          <div class="video-grid">
+            <div class="video-card reveal">
+              <div class="video-wrap"><iframe src="https://www.youtube.com/embed/MG_V1" title="Motion 01" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+              <div class="video-meta"><div class="video-number">01</div><div class="video-info"><h3>Motion 01</h3><p>Motion Graphics · Animation</p></div></div>
+            </div>
+            <div class="video-card reveal">
+              <div class="video-wrap"><iframe src="https://www.youtube.com/embed/MG_V2" title="Motion 02" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+              <div class="video-meta"><div class="video-number">02</div><div class="video-info"><h3>Motion 02</h3><p>Motion Graphics · Animation</p></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="wc-page">
+          <div class="video-grid">
+            <div class="video-card reveal">
+              <div class="video-wrap"><iframe src="https://www.youtube.com/embed/MG_V3" title="Motion 03" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+              <div class="video-meta"><div class="video-number">03</div><div class="video-info"><h3>Motion 03</h3><p>Motion Graphics · Animation</p></div></div>
+            </div>
+            <div class="video-card reveal">
+              <div class="video-wrap"><iframe src="https://www.youtube.com/embed/MG_V4" title="Motion 04" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+              <div class="video-meta"><div class="video-number">04</div><div class="video-info"><h3>Motion 04</h3><p>Motion Graphics · Animation</p></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="wc-nav">
+          <button class="carousel-btn wc-prev" aria-label="Previous"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <span class="carousel-indicator wc-indicator">1 / 2</span>
+          <button class="carousel-btn wc-next" aria-label="Next"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════════
+           ADS  —  replace AD_V1 … AD_V4
+      ══════════════════════════════════════════════════════════════ -->
+      <div class="work-panel" id="tab-ads">
+        <div class="wc-page active">
+          <div class="video-grid">
+            <div class="video-card reveal">
+              <div class="video-wrap"><iframe src="https://www.youtube.com/embed/AD_V1" title="Ad 01" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+              <div class="video-meta"><div class="video-number">01</div><div class="video-info"><h3>Ad 01</h3><p>Commercial · Brand</p></div></div>
+            </div>
+            <div class="video-card reveal">
+              <div class="video-wrap"><iframe src="https://www.youtube.com/embed/AD_V2" title="Ad 02" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+              <div class="video-meta"><div class="video-number">02</div><div class="video-info"><h3>Ad 02</h3><p>Commercial · Brand</p></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="wc-page">
+          <div class="video-grid">
+            <div class="video-card reveal">
+              <div class="video-wrap"><iframe src="https://www.youtube.com/embed/AD_V3" title="Ad 03" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+              <div class="video-meta"><div class="video-number">03</div><div class="video-info"><h3>Ad 03</h3><p>Commercial · Brand</p></div></div>
+            </div>
+            <div class="video-card reveal">
+              <div class="video-wrap"><iframe src="https://www.youtube.com/embed/AD_V4" title="Ad 04" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+              <div class="video-meta"><div class="video-number">04</div><div class="video-info"><h3>Ad 04</h3><p>Commercial · Brand</p></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="wc-nav">
+          <button class="carousel-btn wc-prev" aria-label="Previous"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <span class="carousel-indicator wc-indicator">1 / 2</span>
+          <button class="carousel-btn wc-next" aria-label="Next"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════════
+           DOCUMENTARIES  —  replace DC_V1 … DC_V4
+      ══════════════════════════════════════════════════════════════ -->
+      <div class="work-panel" id="tab-docs">
+        <div class="wc-page active">
+          <div class="video-grid">
+            <div class="video-card reveal">
+              <div class="video-wrap"><iframe src="https://www.youtube.com/embed/DC_V1" title="Documentary 01" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+              <div class="video-meta"><div class="video-number">01</div><div class="video-info"><h3>Documentary 01</h3><p>Documentary · Film</p></div></div>
+            </div>
+            <div class="video-card reveal">
+              <div class="video-wrap"><iframe src="https://www.youtube.com/embed/DC_V2" title="Documentary 02" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+              <div class="video-meta"><div class="video-number">02</div><div class="video-info"><h3>Documentary 02</h3><p>Documentary · Film</p></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="wc-page">
+          <div class="video-grid">
+            <div class="video-card reveal">
+              <div class="video-wrap"><iframe src="https://www.youtube.com/embed/DC_V3" title="Documentary 03" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+              <div class="video-meta"><div class="video-number">03</div><div class="video-info"><h3>Documentary 03</h3><p>Documentary · Film</p></div></div>
+            </div>
+            <div class="video-card reveal">
+              <div class="video-wrap"><iframe src="https://www.youtube.com/embed/DC_V4" title="Documentary 04" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+              <div class="video-meta"><div class="video-number">04</div><div class="video-info"><h3>Documentary 04</h3><p>Documentary · Film</p></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="wc-nav">
+          <button class="carousel-btn wc-prev" aria-label="Previous"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <span class="carousel-indicator wc-indicator">1 / 2</span>
+          <button class="carousel-btn wc-next" aria-label="Next"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════════
+           PODCASTS  —  replace PC_V1 … PC_V4
+      ══════════════════════════════════════════════════════════════ -->
+      <div class="work-panel" id="tab-podcasts">
+        <div class="wc-page active">
+          <div class="video-grid">
+            <div class="video-card reveal">
+              <div class="video-wrap"><iframe src="https://www.youtube.com/embed/PC_V1" title="Podcast 01" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+              <div class="video-meta"><div class="video-number">01</div><div class="video-info"><h3>Podcast 01</h3><p>Podcast · Edit</p></div></div>
+            </div>
+            <div class="video-card reveal">
+              <div class="video-wrap"><iframe src="https://www.youtube.com/embed/PC_V2" title="Podcast 02" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+              <div class="video-meta"><div class="video-number">02</div><div class="video-info"><h3>Podcast 02</h3><p>Podcast · Edit</p></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="wc-page">
+          <div class="video-grid">
+            <div class="video-card reveal">
+              <div class="video-wrap"><iframe src="https://www.youtube.com/embed/PC_V3" title="Podcast 03" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+              <div class="video-meta"><div class="video-number">03</div><div class="video-info"><h3>Podcast 03</h3><p>Podcast · Edit</p></div></div>
+            </div>
+            <div class="video-card reveal">
+              <div class="video-wrap"><iframe src="https://www.youtube.com/embed/PC_V4" title="Podcast 04" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+              <div class="video-meta"><div class="video-number">04</div><div class="video-info"><h3>Podcast 04</h3><p>Podcast · Edit</p></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="wc-nav">
+          <button class="carousel-btn wc-prev" aria-label="Previous"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <span class="carousel-indicator wc-indicator">1 / 2</span>
+          <button class="carousel-btn wc-next" aria-label="Next"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT SECTION
+  ============================================================ -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left reveal">
+          <div class="section-label">ABOUT ME</div>
+          <h2 class="about-heading">Crafting <em>Visual Stories</em><br>That Move People</h2>
+          <p class="about-text">I'm Mahad Hamza — a Video Editor and Creative Manager with a passion for transforming raw footage into compelling, emotion-driven narratives. Whether it's a high-energy commercial, a cinematic brand story, or a personal creative project, I bring a meticulous eye for detail and a bold creative vision to every cut.</p>
+          <p class="about-text">Based in Pakistan, working globally. Let's build something unforgettable.</p>
+          <div class="about-stats">
+            <div class="stat reveal">
+              <span class="stat-num">5+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat reveal">
+              <span class="stat-num">50+</span>
+              <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat reveal">
+              <span class="stat-num">20+</span>
+              <span class="stat-label">Clients Served</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-right reveal">
+          <div class="skills-block">
+            <div class="skills-title">CORE SKILLS</div>
+            <div class="skill-item"><div class="skill-head"><span>Video Editing</span><span>95%</span></div><div class="skill-bar"><div class="skill-fill" data-width="95"></div></div></div>
+            <div class="skill-item"><div class="skill-head"><span>Color Grading</span><span>90%</span></div><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
+            <div class="skill-item"><div class="skill-head"><span>Motion Graphics</span><span>80%</span></div><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
+            <div class="skill-item"><div class="skill-head"><span>Creative Direction</span><span>88%</span></div><div class="skill-bar"><div class="skill-fill" data-width="88"></div></div></div>
+            <div class="skill-item"><div class="skill-head"><span>Post Production</span><span>92%</span></div><div class="skill-bar"><div class="skill-fill" data-width="92"></div></div></div>
+          </div>
+
+          <div class="tools-block">
+            <div class="skills-title">TOOLS</div>
+            <div class="tools-grid">
+              <div class="tool-tag">Premiere Pro</div>
+              <div class="tool-tag">After Effects</div>
+              <div class="tool-tag">DaVinci Resolve</div>
+              <div class="tool-tag">Final Cut Pro</div>
+              <div class="tool-tag">Photoshop</div>
+              <div class="tool-tag">Illustrator</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT SECTION
+  ============================================================ -->
+  <section class="section contact-section" id="contact">
+    <div class="contact-bg-text" aria-hidden="true">CONTACT</div>
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="section-label">GET IN TOUCH</div>
+          <h2 class="contact-heading">Let's Create<br><em>Something</em><br>Together</h2>
+          <div class="contact-details">
+            <a href="mailto:mahad@email.com" class="contact-item">
+              <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg></div>
+              <span>mahad@email.com</span>
+            </a>
+            <a href="tel:+923001234567" class="contact-item">
+              <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.1 1.18 2 2 0 012.11 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.56-.56a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+              <span>+92 300 123 4567</span>
+            </a>
+            <div class="contact-item">
+              <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <span>Pakistan</span>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" target="_blank" rel="noopener" class="social-link"><span class="social-name">Instagram</span><span class="social-arrow">↗</span></a>
+            <a href="#" target="_blank" rel="noopener" class="social-link"><span class="social-name">YouTube</span><span class="social-arrow">↗</span></a>
+            <a href="#" target="_blank" rel="noopener" class="social-link"><span class="social-name">LinkedIn</span><span class="social-arrow">↗</span></a>
+            <a href="#" target="_blank" rel="noopener" class="social-link"><span class="social-name">Behance</span><span class="social-arrow">↗</span></a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name" placeholder="Your Name" required autocomplete="name" /></div>
+              <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email" /></div>
+            </div>
+            <div class="form-group"><label for="subject">Subject</label><input type="text" id="subject" name="subject" placeholder="Project Inquiry" /></div>
+            <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="6" placeholder="Tell me about your project..." required></textarea></div>
+            <button type="submit" class="btn-primary btn-submit" id="submitBtn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">MAHAD HAMZA</div>
+        <div class="footer-links">
+          <a href="#work">Work</a>
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p class="footer-tagline">Video Editor & Creative Manager</p>
+        <div class="footer-socials">
+          <a href="#" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="#" target="_blank" rel="noopener" aria-label="YouTube">YT</a>
+          <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">LI</a>
+          <a href="#" target="_blank" rel="noopener" aria-label="Behance">BE</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Mahad Hamza. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

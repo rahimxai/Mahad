@@ -5,6 +5,9 @@ Run: python app.py
 
 from flask import Flask, render_template, jsonify, request
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
